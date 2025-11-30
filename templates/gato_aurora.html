@@ -1,0 +1,65 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+    <h1>AURORA</h1>
+
+
+<!-- Cabeçalho do site -->
+<header class="site-header">
+    <nav class="navbar-container">
+        <!-- sua navbar entra aqui -->
+    </nav>
+</header>
+
+<!-- Conteúdo principal -->
+<main class="main-content">
+    <!-- Seção do carrossel -->
+    <section class="carousel-section">
+        <div class="carousel-wrapper">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="../static/img/imagens_gatos/aurora1.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="../static/img/imagens_gatos/aurora2.jpeg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../static/img/imagens_gatos/aurora3.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Outras seções do site -->
+    <section class="info-section">
+        <div class="content-wrapper p-5">
+            <h2>Sobre Aurora</h2>
+            <p>Eu sou a Aurora, e já vou avisando: sou braba mesmo. Se algo não me agrada, faço questão de deixar claro. Também sou gorducha, peluda e completamente preguiçosa — uma combinação perfeita para passar horas deitada no meu cantinho favorito, sem pressa pra nada. Apesar do meu jeitão bravo, tenho meu charme único e um estilo de vida que prioriza conforto e descanso. Pode não parecer, mas gosto da minha família… só demonstro quando quero, do meu jeito, e sempre mantendo minha pose.</p>
+        </div>
+    </section>
+</main>
+<!-- Rodapé -->
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>© 2025 - Projeto IP</p>
+    </div>
+</footer>
+
+{% endblock %}

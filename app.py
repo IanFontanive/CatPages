@@ -26,4 +26,12 @@ def gato_pipoca():
 def gato_lola():
     return render_template('gato_lola.html')
 
+@app.route('/gato_aurora')
+def gato_aurora():
+    return render_template('gato_aurora.html')
+
+@app.route('/gemini')
+def gemini():
+    return render_template('gemini.html')
+
 app.run()

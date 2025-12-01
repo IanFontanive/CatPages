@@ -379,3 +379,57 @@ body {
         padding: 0 10px;
     }
 }
+
+.equipe-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.equipe-titulo {
+    text-align: center;
+    font-size: 2.4rem;
+    color: var(--rosa-escuro);
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.membro {
+    background: var(--rosa-claro);
+    border: 2px solid var(--rosa-medio);
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.membro-nome {
+    color: var(--rosa-escuro);
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.membro-descricao {
+    color: var(--cinza-texto);
+    line-height: 1.7;
+    font-size: 1.05rem;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--rosa-claro);
+}
+
+@media (max-width: 600px) {
+    .equipe-titulo {
+        font-size: 2rem;
+    }
+    .membro-nome {
+        font-size: 1.3rem;
+    }
+    .membro-descricao {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+}
+

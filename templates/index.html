@@ -1,13 +1,25 @@
 {% extends "modelo.html" %}
 {% block conteudo %}
+    <section class="hero-section text-center py-5">
+        <div class="container">
+            <h1 class="hero-title">Bem-vindo ao CatPages 🐾</h1>
+            <p class="hero-subtitle mt-3">
+                Aqui você encontrará conteúdo criado por pessoas que realmente amam gatos!
+                Descubra curiosidades, dicas de cuidados, guia para adotar seu próprio gatinho
+                e muito mais. Aproveite para conhecer nossos pets e aprender tudo sobre o mundo felino. 😸
+            </p>
+        </div>
+    </section>
+
     <section class="cats-section py-5">
         <div class="container">
             <h2 class="section-title mb-4">Conheça Nossos Gatinhos 😺</h2>
+
             <div class="row g-4">
 
                 <div class="col-md-4">
                     <div class="cat-card p-3 text-center">
-                        <img src="https://placekitten.com/310/310" alt="Pipoca" class="cat-img mb-3">
+                        <img src="../static/img/imagens_gatos/pipoca1.jpeg" alt="Pipoca" class="cat-img mb-3">
                         <h3 class="cat-name">Pipoca</h3>
                         <p class="cat-desc">
                             Gatinha branca, elegante e delicada. Prefere ambientes tranquilos e interações suaves.
@@ -18,7 +30,7 @@
 
                 <div class="col-md-4">
                     <div class="cat-card p-3 text-center">
-                        <img src="https://placekitten.com/311/311" alt="Espoleta" class="cat-img mb-3">
+                        <img src="../static/img/imagens_gatos/espoleta2.jpeg" alt="Espoleta" class="cat-img mb-3">
                         <h3 class="cat-name">Espoleta</h3>
                         <p class="cat-desc">
                             Gatinha amarela, reservada e seletiva com carinho. Adora brincar e observar do alto.
@@ -29,7 +41,7 @@
 
                 <div class="col-md-4">
                     <div class="cat-card p-3 text-center">
-                        <img src="https://placekitten.com/312/312" alt="Salem" class="cat-img mb-3">
+                        <img src="../static/img/imagens_gatos/salem1.jpeg" alt="Salem" class="cat-img mb-3">
                         <h3 class="cat-name">Salem</h3>
                         <p class="cat-desc">
                             Gatinho preto, comilão e manhoso. Ama atenção e vive pedindo comida.
@@ -38,7 +50,30 @@
                     </div>
                 </div>
 
+                <div class="col-md-4">
+                    <div class="cat-card p-3 text-center">
+                        <img src="../static/img/imagens_gatos/lola1.jpeg" alt="Lola" class="cat-img mb-3">
+                        <h3 class="cat-name">Lola</h3>
+                        <p class="cat-desc">
+                            Lola texto.
+                        </p>
+                        <a href="{{ url_for('gato_lola') }}" class="cat-btn">Ver mais</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="cat-card p-3 text-center">
+                        <img src="../static/img/imagens_gatos/aurora2.jpeg" alt="Lola" class="cat-img mb-3">
+                        <h3 class="cat-name">Aurora</h3>
+                        <p class="cat-desc">
+                            Lola texto.
+                        </p>
+                        <a href="{{ url_for('gato_aurora') }}" class="cat-btn">Ver mais</a>
+                    </div>
+                </div>
+
             </div>
         </div>
-</section>
+    </section>
+
 {% endblock %}

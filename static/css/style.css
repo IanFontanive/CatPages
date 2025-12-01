@@ -1,70 +1,24 @@
-
-body {
-font-family: 'Poppins', sans-serif;
-}
-
-/* Fundo rosa e espaçamento */
-.nav-rosa {
-    background: #ff71ad;       /* cor rosa igual da imagem */
-    padding: 12px 30px;
-    box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
-}
-
-/* Marca do site */
-.nav-rosa .navbar-brand {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #fff !important;
-    font-family: "Poppins", sans-serif;
-}
-
-/* Links */
-.nav-rosa .nav-link {
-    color: #fff !important;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: .3s;
-    padding: 6px 12px !important;
-}
-
-/* Hover + ativo */
-.nav-rosa .nav-link:hover,
-.nav-rosa .nav-link.active {
-    opacity: 0.75;
-}
-
-/* Responsividade */
-@media (max-width: 576px) {
-    .nav-rosa {
-        padding: 10px 15px;
-    }
-
-    .nav-rosa .nav-link {
-        text-align: center;
-        padding: 10px !important;
-    }
-}
-
 body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Fundo rosa e espaçamento */
 .nav-rosa {
-    background: #ff71ad;       /* cor rosa igual da imagem */
+    background: #ff71ad;
     padding: 12px 30px;
     box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+    position: relative;
 }
 
-/* Marca do site */
-.nav-rosa .navbar-brand {
+.navbar-brand {
     font-size: 1.8rem;
     font-weight: 700;
     color: #fff !important;
     font-family: "Poppins", sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* Links */
 .nav-rosa .nav-link {
     color: #fff !important;
     font-weight: 500;
@@ -73,16 +27,24 @@ body {
     padding: 6px 12px !important;
 }
 
-/* Hover + ativo */
 .nav-rosa .nav-link:hover,
 .nav-rosa .nav-link.active {
     opacity: 0.75;
 }
 
-/* Responsividade */
+.navbar-nav {
+    gap: 10px;
+}
+
 @media (max-width: 576px) {
     .nav-rosa {
         padding: 10px 15px;
+    }
+
+    .navbar-brand {
+        position: static;
+        transform: none;
+        margin: 0 auto;
     }
 
     .nav-rosa .nav-link {
@@ -91,9 +53,6 @@ body {
     }
 }
 
-/* ===========================
-   Cores principais
-=========================== */
 :root {
     --rosa-claro: #f8c7d8;
     --rosa-medio: #f39dc2;
@@ -102,11 +61,8 @@ body {
     --cinza-texto: #555;
 }
 
-/* ===========================
-   Hero Section
-=========================== */
 .hero-section {
-    background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-medio));
+    background: linear-gradient(135deg, var(--rosa-medio), var(--rosa-escuro));
     color: var(--branco);
     border-bottom: 4px solid var(--rosa-escuro);
     padding: 60px 20px;
@@ -123,9 +79,6 @@ body {
     margin: 0 auto;
 }
 
-/* ===========================
-   Títulos e Texto
-=========================== */
 .section-title {
     color: var(--rosa-escuro);
     font-weight: 700;
@@ -139,9 +92,6 @@ body {
     text-align: center;
 }
 
-/* ===========================
-   Cards dos Gatinhos
-=========================== */
 .cat-card {
     background: var(--branco);
     border: 2px solid var(--rosa-claro);
@@ -183,7 +133,6 @@ body {
     padding: 0 10px;
 }
 
-/* Botão dos cards */
 .cat-btn {
     display: inline-block;
     margin-top: 10px;
@@ -200,9 +149,6 @@ body {
     background: var(--rosa-escuro);
 }
 
-/* ===========================
-   Gemini Section
-=========================== */
 .ai-section {
     background: var(--rosa-claro);
     border-top: 4px solid var(--rosa-medio);
@@ -226,9 +172,6 @@ body {
     background: var(--rosa-medio);
 }
 
-/* ===========================
-   Responsividade extra
-=========================== */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.2rem;
@@ -243,4 +186,3 @@ body {
         height: 210px;
     }
 }
-

@@ -1,5 +1,44 @@
 {% extends "modelo.html" %}
 {% block conteudo %}
+    <section class="cats-section py-5">
+        <div class="container">
+            <h2 class="section-title mb-4">Conheça Nossos Gatinhos 😺</h2>
+            <div class="row g-4">
 
-<h1> INDEX </h1>
+                <div class="col-md-4">
+                    <div class="cat-card p-3 text-center">
+                        <img src="https://placekitten.com/310/310" alt="Pipoca" class="cat-img mb-3">
+                        <h3 class="cat-name">Pipoca</h3>
+                        <p class="cat-desc">
+                            Gatinha branca, elegante e delicada. Prefere ambientes tranquilos e interações suaves.
+                        </p>
+                        <a href="{{ url_for('gato_pipoca') }}" class="cat-btn">Ver mais</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="cat-card p-3 text-center">
+                        <img src="https://placekitten.com/311/311" alt="Espoleta" class="cat-img mb-3">
+                        <h3 class="cat-name">Espoleta</h3>
+                        <p class="cat-desc">
+                            Gatinha amarela, reservada e seletiva com carinho. Adora brincar e observar do alto.
+                        </p>
+                        <a href="{{ url_for('gato_espoleta') }}" class="cat-btn">Ver mais</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="cat-card p-3 text-center">
+                        <img src="https://placekitten.com/312/312" alt="Salem" class="cat-img mb-3">
+                        <h3 class="cat-name">Salem</h3>
+                        <p class="cat-desc">
+                            Gatinho preto, comilão e manhoso. Ama atenção e vive pedindo comida.
+                        </p>
+                        <a href="{{ url_for('gato_salem') }}" class="cat-btn">Ver mais</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</section>
 {% endblock %}

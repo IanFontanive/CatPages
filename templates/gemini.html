@@ -1,6 +1,74 @@
 {% extends "modelo.html" %}
 {% block conteudo %}
 
-<h1>API GEMINI</h1>
+<h1>INTERAÇÃO COM IA</h1>
+
+<header class="site-header">
+    <nav class="navbar-container">
+    </nav>
+</header>
+
+<main class="main-content">
+
+    <section class="info-section">
+        <div class="content-wrapper p-5">
+            <h2 class="text-center mb-4">Tire suas dúvidas com a IA (Gemini)</h2>
+            <p class="lead text-center mb-4">
+                Pergunte sobre comportamento, rotina, personalidade dos gatos ou selecione uma pergunta rápida.
+            </p>
+        </div>
+    </section>
+
+    <section class="questions-section">
+        <div class="content-wrapper p-5">
+            <h3 class="mb-3">Perguntas rápidas:</h3>
+
+            <div class="list-group">
+                {% for p in perguntas_pets %}
+                    <a href="{{ url_for('gemini', pergunta_rapida=p) }}" 
+                       class="list-group-item list-group-item-action">
+                       {{ p }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <div class="content-wrapper p-5">
+            <h3 class="mb-3">Ou faça sua pergunta livremente:</h3>
+
+            <form method="POST" action="{{ url_for('gemini') }}" class="p-4 border rounded shadow-sm bg-light">
+                <div class="mb-3">
+                    <label for="perguntaInput" class="form-label fw-bold">Sua Pergunta:</label>
+                    <textarea class="form-control" id="perguntaInput" name="pergunta" rows="3" required>{% if pergunta %}{{ pergunta }}{% endif %}</textarea>
+                </div>
+                <button type="submit" class="btn btn-warning w-100">Enviar para o Gemini</button>
+            </form>
+        </div>
+    </section>
+
+    {% if resposta %}
+    <section class="answer-section">
+        <div class="content-wrapper p-5">
+            <div class="card border-0 shadow-lg">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Resposta do Gemini para: "{{ pergunta }}"</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{ resposta | safe }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>© 2025 - Projeto IP</p>
+    </div>
+</footer>
 
 {% endblock %}
